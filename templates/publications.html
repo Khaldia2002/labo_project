@@ -1,0 +1,333 @@
+{% extends "base.html" %}
+
+{% block title %}Publications - LRISD | Laboratoire de Recherche{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="relative pt-32 pb-20 gradient-bg overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan-500/5 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center" data-aos="fade-up">
+            <span class="inline-block glass px-4 py-2 rounded-full text-sm text-cyan-400 mb-4">
+                <i class="fas fa-book mr-2"></i>Publications
+            </span>
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Nos <span class="gradient-text">Publications</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                Découvrez nos contributions scientifiques publiées dans les revues
+                et conférences internationales de premier plan.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="py-8 bg-slate-900 sticky top-20 z-40 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-3">
+            <button class="px-6 py-2 gradient-accent rounded-full text-white font-medium text-sm">Toutes</button>
+            <button
+                class="px-6 py-2 glass rounded-full text-slate-300 hover:text-white font-medium text-sm transition-smooth">2024</button>
+            <button
+                class="px-6 py-2 glass rounded-full text-slate-300 hover:text-white font-medium text-sm transition-smooth">2023</button>
+            <button
+                class="px-6 py-2 glass rounded-full text-slate-300 hover:text-white font-medium text-sm transition-smooth">2022</button>
+            <button
+                class="px-6 py-2 glass rounded-full text-slate-300 hover:text-white font-medium text-sm transition-smooth">Revues</button>
+            <button
+                class="px-6 py-2 glass rounded-full text-slate-300 hover:text-white font-medium text-sm transition-smooth">Conférences</button>
+        </div>
+    </div>
+</section>
+
+<!-- Publications List -->
+<section class="py-16 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6">
+            <!-- Publication 1 -->
+            <article class="glass rounded-2xl p-6 card-hover" data-aos="fade-up">
+                <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <span class="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg text-sm font-medium mb-2">
+                            2024
+                        </span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded text-xs">
+                            Revue
+                        </span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-lg font-semibold text-white mb-2 hover:text-blue-400 transition-smooth">
+                            <a href="#">Deep Learning Approaches for Arabic Natural Language Processing: A Comprehensive
+                                Survey</a>
+                        </h3>
+                        <p class="text-slate-400 text-sm mb-3">
+                            <span class="text-slate-300">A. Benali, F. Zahra, K. Hadj</span> -
+                            <span class="text-blue-400">IEEE Transactions on Neural Networks and Learning Systems</span>
+                        </p>
+                        <p class="text-slate-500 text-sm mb-4">
+                            This comprehensive survey explores the latest deep learning approaches for Arabic NLP,
+                            covering morphological analysis, sentiment analysis, machine translation, and more.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">NLP</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Deep Learning</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Arabic</span>
+                            </div>
+                            <div class="flex items-center space-x-3 ml-auto">
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-red-400 transition-smooth text-sm">
+                                    <i class="fas fa-file-pdf mr-1"></i>PDF
+                                </a>
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-blue-400 transition-smooth text-sm">
+                                    <i class="fas fa-link mr-1"></i>DOI
+                                </a>
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-purple-400 transition-smooth text-sm">
+                                    <i class="fas fa-quote-right mr-1"></i>Citer
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Publication 2 -->
+            <article class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <span class="px-4 py-2 bg-purple-500/20 text-purple-400 rounded-lg text-sm font-medium mb-2">
+                            2024
+                        </span>
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs">
+                            Conférence
+                        </span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-lg font-semibold text-white mb-2 hover:text-purple-400 transition-smooth">
+                            <a href="#">Federated Learning for Privacy-Preserving Medical Image Analysis</a>
+                        </h3>
+                        <p class="text-slate-400 text-sm mb-3">
+                            <span class="text-slate-300">S. Mezouar, K. Hadj, A. Benali</span> -
+                            <span class="text-purple-400">MICCAI 2024</span>
+                        </p>
+                        <p class="text-slate-500 text-sm mb-4">
+                            A novel federated learning framework for privacy-preserving medical image analysis,
+                            enabling collaborative training without sharing sensitive patient data.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Federated
+                                    Learning</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Medical AI</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Privacy</span>
+                            </div>
+                            <div class="flex items-center space-x-3 ml-auto">
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-red-400 transition-smooth text-sm">
+                                    <i class="fas fa-file-pdf mr-1"></i>PDF
+                                </a>
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-blue-400 transition-smooth text-sm">
+                                    <i class="fas fa-link mr-1"></i>DOI
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Publication 3 -->
+            <article class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <span class="px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg text-sm font-medium mb-2">
+                            2023
+                        </span>
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs">
+                            Conférence
+                        </span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-lg font-semibold text-white mb-2 hover:text-cyan-400 transition-smooth">
+                            <a href="#">Transformer-Based Models for Real-Time Object Detection in Autonomous
+                                Vehicles</a>
+                        </h3>
+                        <p class="text-slate-400 text-sm mb-3">
+                            <span class="text-slate-300">S. Mezouar, A. Benali</span> -
+                            <span class="text-cyan-400">CVPR 2023</span>
+                        </p>
+                        <p class="text-slate-500 text-sm mb-4">
+                            Efficient transformer architectures for real-time object detection in autonomous driving,
+                            achieving state-of-the-art performance with reduced computational costs.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Computer Vision</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Transformers</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Autonomous
+                                    Driving</span>
+                            </div>
+                            <div class="flex items-center space-x-3 ml-auto">
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-red-400 transition-smooth text-sm">
+                                    <i class="fas fa-file-pdf mr-1"></i>PDF
+                                </a>
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-blue-400 transition-smooth text-sm">
+                                    <i class="fab fa-github mr-1"></i>Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Publication 4 -->
+            <article class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <span class="px-4 py-2 bg-green-500/20 text-green-400 rounded-lg text-sm font-medium mb-2">
+                            2023
+                        </span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded text-xs">
+                            Revue
+                        </span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-lg font-semibold text-white mb-2 hover:text-green-400 transition-smooth">
+                            <a href="#">Adversarial Attacks Detection in IoT Networks Using Graph Neural Networks</a>
+                        </h3>
+                        <p class="text-slate-400 text-sm mb-3">
+                            <span class="text-slate-300">Y. Brahim, A. Belkadi</span> -
+                            <span class="text-green-400">IEEE Internet of Things Journal</span>
+                        </p>
+                        <p class="text-slate-500 text-sm mb-4">
+                            A graph neural network approach for detecting adversarial attacks in IoT networks,
+                            improving security through intelligent network traffic analysis.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Cybersecurity</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">GNN</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">IoT</span>
+                            </div>
+                            <div class="flex items-center space-x-3 ml-auto">
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-red-400 transition-smooth text-sm">
+                                    <i class="fas fa-file-pdf mr-1"></i>PDF
+                                </a>
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-blue-400 transition-smooth text-sm">
+                                    <i class="fas fa-link mr-1"></i>DOI
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Publication 5 -->
+            <article class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                    <div class="flex-shrink-0 flex flex-col items-center">
+                        <span class="px-4 py-2 bg-orange-500/20 text-orange-400 rounded-lg text-sm font-medium mb-2">
+                            2022
+                        </span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded text-xs">
+                            Revue
+                        </span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3
+                            class="font-display text-lg font-semibold text-white mb-2 hover:text-orange-400 transition-smooth">
+                            <a href="#">Multi-Agent Reinforcement Learning for Autonomous Robot Coordination</a>
+                        </h3>
+                        <p class="text-slate-400 text-sm mb-3">
+                            <span class="text-slate-300">A. Belkadi, K. Hadj</span> -
+                            <span class="text-orange-400">Robotics and Autonomous Systems</span>
+                        </p>
+                        <p class="text-slate-500 text-sm mb-4">
+                            A multi-agent reinforcement learning framework for coordinating autonomous robots
+                            in complex environments with dynamic obstacles.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Robotics</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">MARL</span>
+                                <span class="px-3 py-1 glass rounded-full text-xs text-slate-300">Autonomous
+                                    Systems</span>
+                            </div>
+                            <div class="flex items-center space-x-3 ml-auto">
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-red-400 transition-smooth text-sm">
+                                    <i class="fas fa-file-pdf mr-1"></i>PDF
+                                </a>
+                                <a href="#"
+                                    class="flex items-center text-slate-400 hover:text-blue-400 transition-smooth text-sm">
+                                    <i class="fas fa-video mr-1"></i>Vidéo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-12" data-aos="fade-up">
+            <nav class="flex items-center space-x-2">
+                <button
+                    class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white transition-smooth">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button
+                    class="w-10 h-10 gradient-accent rounded-lg flex items-center justify-center text-white font-medium">1</button>
+                <button
+                    class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white transition-smooth">2</button>
+                <button
+                    class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white transition-smooth">3</button>
+                <span class="text-slate-500">...</span>
+                <button
+                    class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white transition-smooth">10</button>
+                <button
+                    class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white transition-smooth">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="py-16 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div data-aos="zoom-in">
+                <div class="font-display text-4xl font-bold gradient-text mb-2">150+</div>
+                <p class="text-slate-400">Publications Totales</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <div class="font-display text-4xl font-bold gradient-text mb-2">45</div>
+                <p class="text-slate-400">Revues Q1</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <div class="font-display text-4xl font-bold gradient-text mb-2">2500+</div>
+                <p class="text-slate-400">Citations</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <div class="font-display text-4xl font-bold gradient-text mb-2">28</div>
+                <p class="text-slate-400">H-Index Moyen</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

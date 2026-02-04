@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+
+{% block title %}Projets - LRISD | Laboratoire de Recherche{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="relative pt-32 pb-20 gradient-bg overflow-hidden">
+    <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-blue-500/5 to-transparent"></div>
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center" data-aos="fade-up">
+            <span class="inline-block glass px-4 py-2 rounded-full text-sm text-blue-400 mb-4">
+                <i class="fas fa-project-diagram mr-2"></i>Projets
+            </span>
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Nos <span class="gradient-text">Projets de Recherche</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                Découvrez nos projets innovants qui repoussent les frontières
+                de l'intelligence artificielle et des sciences des données.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Active Projects -->
+<section class="py-20 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="font-display text-3xl font-bold text-white mb-4">Projets en Cours</h2>
+            <div class="w-24 h-1 gradient-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover group" data-aos="fade-up">
+                <div
+                    class="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center relative overflow-hidden">
+                    <i class="fas fa-brain text-8xl text-blue-400/30 group-hover:scale-110 transition-smooth"></i>
+                    <span
+                        class="absolute top-4 right-4 px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium">
+                        <i class="fas fa-circle text-[8px] mr-1"></i>En cours
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">2023-2026</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs">ANR</span>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold text-white mb-3">
+                        AI-MED: Intelligence Artificielle pour le Diagnostic Médical
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">
+                        Développement de systèmes d'IA pour l'aide au diagnostic médical,
+                        utilisant l'apprentissage profond pour l'analyse d'images médicales.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                AB</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                SM</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                KH</div>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 text-sm transition-smooth">
+                            En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover group" data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="h-48 bg-gradient-to-br from-cyan-500/20 to-green-500/20 flex items-center justify-center relative overflow-hidden">
+                    <i class="fas fa-language text-8xl text-cyan-400/30 group-hover:scale-110 transition-smooth"></i>
+                    <span
+                        class="absolute top-4 right-4 px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium">
+                        <i class="fas fa-circle text-[8px] mr-1"></i>En cours
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs">2022-2025</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">PRFU</span>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold text-white mb-3">
+                        ARABICNLP: Traitement Automatique de la Langue Arabe
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">
+                        Création de ressources et d'outils NLP pour l'arabe et ses dialectes,
+                        incluant des modèles de langage et des corpus annotés.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                FZ</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                AB</div>
+                        </div>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 text-sm transition-smooth">
+                            En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover group" data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="h-48 bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center relative overflow-hidden">
+                    <i
+                        class="fas fa-shield-alt text-8xl text-orange-400/30 group-hover:scale-110 transition-smooth"></i>
+                    <span
+                        class="absolute top-4 right-4 px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium">
+                        <i class="fas fa-circle text-[8px] mr-1"></i>En cours
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs">2024-2027</span>
+                        <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs">Horizon Europe</span>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold text-white mb-3">
+                        SECUREIOT: Sécurité IA pour les Réseaux IoT
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">
+                        Protection des infrastructures IoT critiques contre les cyberattaques
+                        utilisant des techniques d'apprentissage automatique avancées.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                YB</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                KH</div>
+                        </div>
+                        <a href="#" class="text-orange-400 hover:text-orange-300 text-sm transition-smooth">
+                            En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover group" data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="h-48 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 flex items-center justify-center relative overflow-hidden">
+                    <i class="fas fa-robot text-8xl text-indigo-400/30 group-hover:scale-110 transition-smooth"></i>
+                    <span
+                        class="absolute top-4 right-4 px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium">
+                        <i class="fas fa-circle text-[8px] mr-1"></i>En cours
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-xs">2023-2026</span>
+                        <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-xs">Industriel</span>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold text-white mb-3">
+                        SMARTROBOT: Robotique Collaborative Intelligente
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">
+                        Développement de robots collaboratifs dotés d'intelligence artificielle
+                        pour l'industrie 4.0 et les environnements de travail partagés.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                AB</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-violet-500 flex items-center justify-center text-white text-xs border-2 border-slate-800">
+                                SM</div>
+                        </div>
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300 text-sm transition-smooth">
+                            En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research Areas -->
+<section class="py-20 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="font-display text-3xl font-bold text-white mb-4">Axes de Recherche</h2>
+            <div class="w-24 h-1 gradient-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Area 1 -->
+            <div class="glass rounded-2xl p-6 text-center card-hover" data-aos="fade-up">
+                <div class="w-16 h-16 mx-auto gradient-accent rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-brain text-2xl text-white"></i>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-white mb-2">Intelligence Artificielle</h3>
+                <p class="text-slate-400 text-sm">Deep Learning, Machine Learning, IA Explicable</p>
+            </div>
+
+            <!-- Area 2 -->
+            <div class="glass rounded-2xl p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="w-16 h-16 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-database text-2xl text-white"></i>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-white mb-2">Big Data & Analytics</h3>
+                <p class="text-slate-400 text-sm">Data Mining, Visualisation, Traitement Distribué</p>
+            </div>
+
+            <!-- Area 3 -->
+            <div class="glass rounded-2xl p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="w-16 h-16 mx-auto bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-language text-2xl text-white"></i>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-white mb-2">NLP</h3>
+                <p class="text-slate-400 text-sm">Traitement du Langage, Traduction, Analyse de Sentiments</p>
+            </div>
+
+            <!-- Area 4 -->
+            <div class="glass rounded-2xl p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="w-16 h-16 mx-auto bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-eye text-2xl text-white"></i>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-white mb-2">Vision par Ordinateur</h3>
+                <p class="text-slate-400 text-sm">Détection, Segmentation, Reconnaissance</p>
+            </div>
+
+            <!-- Area 5 -->
+            <div class="glass rounded-2xl p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="400">
+                <div
+                    class="w-16 h-16 mx-auto bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-shield-alt text-2xl text-white"></i>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-white mb-2">Cybersécurité</h3>
+                <p class="text-slate-400 text-sm">Détection d'Intrusions, IA Adversariale, IoT Security</p>
+            </div>
+
+            <!-- Area 6 -->
+            <div class="glass rounded-2xl p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="500">
+                <div
+                    class="w-16 h-16 mx-auto bg-gradient-to-br from-indigo-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-robot text-2xl text-white"></i>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-white mb-2">Robotique</h3>
+                <p class="text-slate-400 text-sm">Robots Autonomes, Navigation, Manipulation</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners -->
+<section class="py-20 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="font-display text-3xl font-bold text-white mb-4">Nos Partenaires</h2>
+            <div class="w-24 h-1 gradient-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {% for i in "123456" %}
+            <div class="glass rounded-xl p-6 flex items-center justify-center h-24 card-hover" data-aos="zoom-in"
+                data-aos-delay="{{ forloop.counter0 }}00">
+                <span class="text-slate-500 font-medium">Partenaire {{ forloop.counter }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,667 @@
+{% load static %}
+
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laboratoire de Recherche en Intelligence Artificielle et Sciences des Données - Université">
+    <title>LRISD - Laboratoire de Recherche en IA et Data Science</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Prevent white flash on page load */
+        html {
+            background-color: #0f172a;
+        }
+
+        /* Custom Fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            opacity: 0;
+            animation: fadeIn 0.3s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Gradient Backgrounds */
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+        }
+
+        .gradient-accent {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animated Background Particles */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.3);
+            animation: float 15s infinite ease-in-out;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.3;
+            }
+
+            25% {
+                transform: translateY(-30px) translateX(20px) rotate(90deg);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translateY(-15px) translateX(-15px) rotate(180deg);
+                opacity: 0.4;
+            }
+
+            75% {
+                transform: translateY(-40px) translateX(10px) rotate(270deg);
+                opacity: 0.5;
+            }
+        }
+
+        /* Glow Effects */
+        .glow {
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Smooth Transitions */
+        .transition-smooth {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Navigation Animation */
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Button Animations */
+        .btn-animated {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-animated::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn-animated:hover::before {
+            left: 100%;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        /* Typing Animation */
+        .typing-animation {
+            overflow: hidden;
+            border-right: 3px solid #3b82f6;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: #3b82f6
+            }
+        }
+
+        /* Pulse Animation */
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+            }
+        }
+
+        /* Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Skeleton Loading */
+        .skeleton {
+            background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Counter Animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Magnetic Button Effect */
+        .magnetic {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+    </style>
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="bg-slate-900 text-white min-h-screen antialiased">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="{% url 'accueil' %}" class="flex items-center space-x-3 group">
+                    <div
+                        class="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center glow-hover transition-smooth">
+                        <i class="fas fa-flask text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-xl gradient-text">LRISD</span>
+                        <p class="text-xs text-slate-400">Laboratoire de Recherche</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="{% url 'accueil' %}"
+                        class="nav-link px-4 py-2 text-slate-300 hover:text-white transition-smooth">
+                        <i class="fas fa-home mr-2"></i>Accueil
+                    </a>
+                    <a href="{% url 'projets' %}"
+                        class="nav-link px-4 py-2 text-slate-300 hover:text-white transition-smooth">
+                        <i class="fas fa-microscope mr-2"></i>Projets
+                    </a>
+                    <a href="{% url 'equipes' %}"
+                        class="nav-link px-4 py-2 text-slate-300 hover:text-white transition-smooth">
+                        <i class="fas fa-users mr-2"></i>Équipe
+                    </a>
+                    <a href="{% url 'publications' %}"
+                        class="nav-link px-4 py-2 text-slate-300 hover:text-white transition-smooth">
+                        <i class="fas fa-book mr-2"></i>Publications
+                    </a>
+                    <a href="{% url 'actualites' %}"
+                        class="nav-link px-4 py-2 text-slate-300 hover:text-white transition-smooth">
+                        <i class="fas fa-newspaper mr-2"></i>Actualités
+                    </a>
+                    <a href="{% url 'contact' %}"
+                        class="nav-link px-4 py-2 text-slate-300 hover:text-white transition-smooth">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="{% url 'contact' %}"
+                        class="btn-animated gradient-accent px-6 py-3 rounded-full font-semibold text-white glow transition-smooth hover:scale-105">
+                        Nous Rejoindre
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 hover:text-white transition-smooth">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full glass-dark md:hidden">
+            <div class="p-6">
+                <button id="closeMobileMenu" class="absolute top-6 right-6 text-slate-300 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="mt-16 space-y-4">
+                    <a href="{% url 'accueil' %}"
+                        class="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-smooth">
+                        <i class="fas fa-home mr-3"></i>Accueil
+                    </a>
+                    <a href="{% url 'projets' %}"
+                        class="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-smooth">
+                        <i class="fas fa-microscope mr-3"></i>Projets
+                    </a>
+                    <a href="{% url 'equipes' %}"
+                        class="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-smooth">
+                        <i class="fas fa-users mr-3"></i>Équipe
+                    </a>
+                    <a href="{% url 'publications' %}"
+                        class="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-smooth">
+                        <i class="fas fa-book mr-3"></i>Publications
+                    </a>
+                    <a href="{% url 'actualites' %}"
+                        class="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-smooth">
+                        <i class="fas fa-newspaper mr-3"></i>Actualités
+                    </a>
+                    <a href="{% url 'contact' %}"
+                        class="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-smooth">
+                        <i class="fas fa-envelope mr-3"></i>Contact
+                    </a>
+                    <a href="{% url 'contact' %}"
+                        class="block gradient-accent px-4 py-3 rounded-lg text-center font-semibold mt-6">
+                        Nous Rejoindre
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Logo & Description -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center">
+                            <i class="fas fa-flask text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <span class="font-display font-bold text-xl gradient-text">LRISD</span>
+                            <p class="text-xs text-slate-400">Laboratoire de Recherche</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6 max-w-md">
+                        Excellence en recherche scientifique et innovation technologique.
+                        Notre laboratoire repousse les frontières du savoir dans les domaines
+                        de l'intelligence artificielle et des sciences des données.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 glass rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display font-semibold text-white mb-6">Liens Rapides</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#recherche" class="text-slate-400 hover:text-blue-400 transition-smooth">Axes de
+                                Recherche</a></li>
+                        <li><a href="#equipe" class="text-slate-400 hover:text-blue-400 transition-smooth">Notre
+                                Équipe</a></li>
+                        <li><a href="#publications"
+                                class="text-slate-400 hover:text-blue-400 transition-smooth">Publications</a></li>
+                        <li><a href="#projets" class="text-slate-400 hover:text-blue-400 transition-smooth">Projets</a>
+                        </li>
+                        <li><a href="#actualites"
+                                class="text-slate-400 hover:text-blue-400 transition-smooth">Actualités</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-display font-semibold text-white mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3 text-slate-400">
+                            <i class="fas fa-map-marker-alt text-blue-400"></i>
+                            <span>Université, Département d'Informatique</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-slate-400">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <span>contact@lrisd.univ.dz</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-slate-400">
+                            <i class="fas fa-phone text-blue-400"></i>
+                            <span>+213 XX XX XX XX</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm">
+                    © 2024 LRISD - Tous droits réservés
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-slate-500 hover:text-slate-300 text-sm transition-smooth">Mentions
+                        Légales</a>
+                    <a href="#" class="text-slate-500 hover:text-slate-300 text-sm transition-smooth">Politique de
+                        Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 gradient-accent rounded-full flex items-center justify-center text-white shadow-lg opacity-0 invisible transition-smooth hover:scale-110 glow">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Navbar Background on Scroll
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-2xl');
+            } else {
+                navbar.classList.remove('shadow-2xl');
+            }
+        });
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        // Trigger counter animation when in view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            counterObserver.observe(statsSection);
+        }
+
+        // Magnetic Button Effect
+        document.querySelectorAll('.magnetic').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+    </script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

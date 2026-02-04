@@ -1,0 +1,291 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - LRISD | Laboratoire de Recherche{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden pt-20">
+    <!-- Animated Background Particles -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="particle w-4 h-4" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle w-6 h-6" style="top: 40%; left: 80%; animation-delay: 2s;"></div>
+        <div class="particle w-3 h-3" style="top: 60%; left: 30%; animation-delay: 4s;"></div>
+        <div class="particle w-5 h-5" style="top: 80%; left: 70%; animation-delay: 1s;"></div>
+        <div class="particle w-4 h-4" style="top: 30%; left: 50%; animation-delay: 3s;"></div>
+        <div class="particle w-8 h-8" style="top: 70%; left: 15%; animation-delay: 5s;"></div>
+        <div class="particle w-3 h-3" style="top: 15%; left: 90%; animation-delay: 2.5s;"></div>
+        <div class="particle w-5 h-5" style="top: 85%; left: 40%; animation-delay: 1.5s;"></div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute top-1/4 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Text Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-green-400 rounded-full pulse-glow"></span>
+                    <span class="text-sm text-slate-300">Excellence en Recherche Scientifique</span>
+                </div>
+
+                <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    <span class="text-white">Laboratoire de</span><br>
+                    <span class="gradient-text">Recherche</span><br>
+                    <span class="text-white">en IA & Data Science</span>
+                </h1>
+
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed max-w-lg">
+                    Nous façonnons l'avenir à travers l'innovation, la recherche de pointe
+                    et la collaboration internationale dans les domaines de l'intelligence
+                    artificielle et des sciences des données.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="{% url 'projets' %}"
+                        class="btn-animated gradient-accent px-8 py-4 rounded-full font-semibold text-white text-center glow transition-smooth hover:scale-105">
+                        <i class="fas fa-rocket mr-2"></i>Découvrir nos Travaux
+                    </a>
+                    <a href="{% url 'equipes' %}"
+                        class="glass px-8 py-4 rounded-full font-semibold text-white text-center transition-smooth hover:bg-white/10">
+                        <i class="fas fa-users mr-2"></i>Notre Équipe
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image / 3D Element -->
+            <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                <div class="relative w-full aspect-square max-w-lg mx-auto">
+                    <!-- Decorative Rings -->
+                    <div class="absolute inset-0 border-2 border-blue-500/20 rounded-full animate-spin"
+                        style="animation-duration: 20s;"></div>
+                    <div class="absolute inset-8 border-2 border-purple-500/20 rounded-full animate-spin"
+                        style="animation-duration: 15s; animation-direction: reverse;"></div>
+                    <div class="absolute inset-16 border-2 border-cyan-500/20 rounded-full animate-spin"
+                        style="animation-duration: 10s;"></div>
+
+                    <!-- Central Element -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-64 h-64 glass rounded-3xl p-8 floating glow">
+                            <div class="w-full h-full gradient-accent rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-brain text-7xl text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Icons -->
+                    <div class="absolute top-10 left-10 glass p-4 rounded-2xl floating" style="animation-delay: 0.5s;">
+                        <i class="fas fa-dna text-3xl text-blue-400"></i>
+                    </div>
+                    <div class="absolute top-20 right-5 glass p-4 rounded-2xl floating" style="animation-delay: 1s;">
+                        <i class="fas fa-microchip text-3xl text-purple-400"></i>
+                    </div>
+                    <div class="absolute bottom-20 left-5 glass p-4 rounded-2xl floating"
+                        style="animation-delay: 1.5s;">
+                        <i class="fas fa-chart-line text-3xl text-cyan-400"></i>
+                    </div>
+                    <div class="absolute bottom-10 right-10 glass p-4 rounded-2xl floating"
+                        style="animation-delay: 2s;">
+                        <i class="fas fa-robot text-3xl text-pink-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2" data-aos="fade-up" data-aos-delay="600">
+        <a href="#stats" class="flex flex-col items-center text-slate-400 hover:text-white transition-smooth">
+            <span class="text-sm mb-2">Défiler vers le bas</span>
+            <i class="fas fa-chevron-down animate-bounce"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section id="stats" class="py-20 bg-slate-900/50 stats-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Stat 1 -->
+            <div class="text-center" data-aos="zoom-in" data-aos-delay="0">
+                <div
+                    class="w-20 h-20 mx-auto glass rounded-2xl flex items-center justify-center mb-4 glow-hover transition-smooth">
+                    <i class="fas fa-users text-3xl text-blue-400"></i>
+                </div>
+                <div class="font-display text-4xl md:text-5xl font-bold gradient-text counter" data-target="35">0</div>
+                <p class="text-slate-400 mt-2">Chercheurs</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                <div
+                    class="w-20 h-20 mx-auto glass rounded-2xl flex items-center justify-center mb-4 glow-hover transition-smooth">
+                    <i class="fas fa-file-alt text-3xl text-purple-400"></i>
+                </div>
+                <div class="font-display text-4xl md:text-5xl font-bold gradient-text counter" data-target="150">0</div>
+                <p class="text-slate-400 mt-2">Publications</p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                <div
+                    class="w-20 h-20 mx-auto glass rounded-2xl flex items-center justify-center mb-4 glow-hover transition-smooth">
+                    <i class="fas fa-project-diagram text-3xl text-cyan-400"></i>
+                </div>
+                <div class="font-display text-4xl md:text-5xl font-bold gradient-text counter" data-target="25">0</div>
+                <p class="text-slate-400 mt-2">Projets Actifs</p>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                <div
+                    class="w-20 h-20 mx-auto glass rounded-2xl flex items-center justify-center mb-4 glow-hover transition-smooth">
+                    <i class="fas fa-globe text-3xl text-pink-400"></i>
+                </div>
+                <div class="font-display text-4xl md:text-5xl font-bold gradient-text counter" data-target="12">0</div>
+                <p class="text-slate-400 mt-2">Partenaires Internationaux</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research Areas Preview -->
+<section class="py-24 gradient-bg relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-500/5 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block glass px-4 py-2 rounded-full text-sm text-blue-400 mb-4">
+                <i class="fas fa-microscope mr-2"></i>Nos Domaines
+            </span>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+                Axes de <span class="gradient-text">Recherche</span>
+            </h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Notre laboratoire explore les frontières du savoir dans plusieurs domaines
+                interconnectés de l'intelligence artificielle et des sciences des données.
+            </p>
+        </div>
+
+        <!-- Research Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="glass rounded-3xl p-8 card-hover group" data-aos="fade-up" data-aos-delay="0">
+                <div
+                    class="w-16 h-16 gradient-accent rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth">
+                    <i class="fas fa-brain text-3xl text-white"></i>
+                </div>
+                <h3 class="font-display text-xl font-semibold text-white mb-3">Intelligence Artificielle</h3>
+                <p class="text-slate-400 mb-6">
+                    Développement d'algorithmes d'apprentissage profond et de systèmes
+                    intelligents pour résoudre des problèmes complexes.
+                </p>
+                <a href="{% url 'projets' %}"
+                    class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-smooth">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass rounded-3xl p-8 card-hover group" data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth">
+                    <i class="fas fa-database text-3xl text-white"></i>
+                </div>
+                <h3 class="font-display text-xl font-semibold text-white mb-3">Big Data & Analytics</h3>
+                <p class="text-slate-400 mb-6">
+                    Analyse et traitement de données massives pour extraire des insights
+                    précieux et prendre des décisions éclairées.
+                </p>
+                <a href="{% url 'projets' %}"
+                    class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-smooth">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass rounded-3xl p-8 card-hover group" data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth">
+                    <i class="fas fa-language text-3xl text-white"></i>
+                </div>
+                <h3 class="font-display text-xl font-semibold text-white mb-3">Traitement du Langage</h3>
+                <p class="text-slate-400 mb-6">
+                    Recherche en NLP pour comprendre et générer du langage humain
+                    avec des applications multilingues.
+                </p>
+                <a href="{% url 'projets' %}"
+                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-smooth">
+                    En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">
+            <a href="{% url 'projets' %}"
+                class="btn-animated gradient-accent px-8 py-4 rounded-full font-semibold text-white inline-flex items-center glow transition-smooth hover:scale-105">
+                <i class="fas fa-flask mr-2"></i>Voir tous les projets
+                <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 bg-slate-900 relative overflow-hidden">
+    <div class="absolute inset-0">
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-3xl">
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="glass rounded-3xl p-12 text-center" data-aos="zoom-in">
+            <div class="w-20 h-20 mx-auto gradient-accent rounded-2xl flex items-center justify-center mb-8 glow">
+                <i class="fas fa-rocket text-4xl text-white"></i>
+            </div>
+
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+                Rejoignez notre <span class="gradient-text">Aventure Scientifique</span>
+            </h2>
+
+            <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
+                Vous êtes passionné par la recherche et l'innovation ?
+                Rejoignez notre équipe de chercheurs et contribuez à façonner l'avenir de la technologie.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="{% url 'contact' %}"
+                    class="btn-animated gradient-accent px-8 py-4 rounded-full font-semibold text-white glow transition-smooth hover:scale-105">
+                    <i class="fas fa-user-plus mr-2"></i>Nous Contacter
+                </a>
+                <a href="{% url 'equipes' %}"
+                    class="glass px-8 py-4 rounded-full font-semibold text-white transition-smooth hover:bg-white/10">
+                    <i class="fas fa-users mr-2"></i>Voir l'Équipe
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Additional page-specific animations
+    document.addEventListener('DOMContentLoaded', function () {
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function () {
+            const scrolled = window.pageYOffset;
+            const heroElements = document.querySelectorAll('.floating');
+
+            heroElements.forEach((el, index) => {
+                const speed = 0.1 + (index * 0.02);
+                el.style.transform = `translateY(${-scrolled * speed}px)`;
+            });
+        });
+    });
+</script>
+{% endblock %}

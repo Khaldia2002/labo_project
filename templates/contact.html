@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - LRISD | Laboratoire de Recherche{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="relative pt-32 pb-20 gradient-bg overflow-hidden">
+    <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-purple-500/5 to-transparent"></div>
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center" data-aos="fade-up">
+            <span class="inline-block glass px-4 py-2 rounded-full text-sm text-pink-400 mb-4">
+                <i class="fas fa-envelope mr-2"></i>Contact
+            </span>
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Contactez <span class="gradient-text">Nous</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                Vous avez une question, une proposition de collaboration ou souhaitez
+                rejoindre notre équipe ? N'hésitez pas à nous contacter.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="glass rounded-3xl p-8" data-aos="fade-right">
+                <h2 class="font-display text-2xl font-bold text-white mb-6">
+                    Envoyez-nous un message
+                </h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nom" class="block text-sm font-medium text-slate-300 mb-2">Nom</label>
+                            <input type="text" id="nom" name="nom"
+                                class="w-full px-4 py-3 glass rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-smooth"
+                                placeholder="Votre nom">
+                        </div>
+                        <div>
+                            <label for="prenom" class="block text-sm font-medium text-slate-300 mb-2">Prénom</label>
+                            <input type="text" id="prenom" name="prenom"
+                                class="w-full px-4 py-3 glass rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-smooth"
+                                placeholder="Votre prénom">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full px-4 py-3 glass rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-smooth"
+                            placeholder="votre@email.com">
+                    </div>
+
+                    <div>
+                        <label for="sujet" class="block text-sm font-medium text-slate-300 mb-2">Sujet</label>
+                        <select id="sujet" name="sujet"
+                            class="w-full px-4 py-3 glass rounded-xl text-white bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 transition-smooth">
+                            <option value="" class="bg-slate-800">Sélectionnez un sujet</option>
+                            <option value="collaboration" class="bg-slate-800">Proposition de collaboration</option>
+                            <option value="stage" class="bg-slate-800">Demande de stage</option>
+                            <option value="doctorat" class="bg-slate-800">Candidature doctorat</option>
+                            <option value="postdoc" class="bg-slate-800">Candidature post-doc</option>
+                            <option value="information" class="bg-slate-800">Demande d'information</option>
+                            <option value="autre" class="bg-slate-800">Autre</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full px-4 py-3 glass rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-smooth resize-none"
+                            placeholder="Votre message..."></textarea>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" id="consent" name="consent"
+                            class="w-4 h-4 rounded border-slate-600 bg-slate-800 text-blue-500 focus:ring-blue-500 focus:ring-offset-slate-900">
+                        <label for="consent" class="ml-2 text-sm text-slate-400">
+                            J'accepte que mes données soient utilisées pour traiter ma demande
+                        </label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full btn-animated gradient-accent px-8 py-4 rounded-xl font-semibold text-white glow transition-smooth hover:scale-[1.02]">
+                        <i class="fas fa-paper-plane mr-2"></i>Envoyer le message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-8" data-aos="fade-left">
+                <!-- Address Card -->
+                <div class="glass rounded-3xl p-8 card-hover">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-14 h-14 gradient-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-semibold text-white mb-2">Adresse</h3>
+                            <p class="text-slate-400">
+                                Université - Département d'Informatique<br>
+                                Laboratoire LRISD, Bâtiment A, 3ème étage<br>
+                                Rue Exemple, 16000 - Algérie
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="glass rounded-3xl p-8 card-hover">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-semibold text-white mb-2">Email</h3>
+                            <p class="text-slate-400 mb-1">
+                                <a href="mailto:contact@lrisd.univ.dz" class="hover:text-blue-400 transition-smooth">
+                                    contact@lrisd.univ.dz
+                                </a>
+                            </p>
+                            <p class="text-slate-400">
+                                <a href="mailto:direction@lrisd.univ.dz" class="hover:text-blue-400 transition-smooth">
+                                    direction@lrisd.univ.dz
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="glass rounded-3xl p-8 card-hover">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-semibold text-white mb-2">Téléphone</h3>
+                            <p class="text-slate-400 mb-1">+213 XX XX XX XX (Standard)</p>
+                            <p class="text-slate-400">+213 XX XX XX XX (Direction)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hours Card -->
+                <div class="glass rounded-3xl p-8 card-hover">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-semibold text-white mb-2">Horaires</h3>
+                            <p class="text-slate-400 mb-1">Dimanche - Jeudi: 8h00 - 17h00</p>
+                            <p class="text-slate-400">Vendredi - Samedi: Fermé</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="glass rounded-3xl p-8">
+                    <h3 class="font-display text-lg font-semibold text-white mb-4">Suivez-nous</h3>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-12 h-12 glass rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 glass rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 glass rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 glass rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 glass rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 transition-smooth">
+                            <i class="fab fa-researchgate text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-16 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="font-display text-3xl font-bold text-white mb-4">Notre Localisation</h2>
+            <div class="w-24 h-1 gradient-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="glass rounded-3xl overflow-hidden h-96" data-aos="zoom-in">
+            <div class="w-full h-full bg-slate-800 flex items-center justify-center">
+                <div class="text-center">
+                    <i class="fas fa-map-marked-alt text-6xl text-slate-600 mb-4"></i>
+                    <p class="text-slate-500">Carte interactive à intégrer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="font-display text-3xl font-bold text-white mb-4">Questions Fréquentes</h2>
+            <div class="w-24 h-1 gradient-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="glass rounded-2xl overflow-hidden" data-aos="fade-up">
+                <button
+                    class="w-full px-6 py-4 text-left flex items-center justify-between text-white font-medium hover:bg-white/5 transition-smooth">
+                    <span>Comment postuler pour un doctorat ?</span>
+                    <i class="fas fa-chevron-down text-slate-400"></i>
+                </button>
+                <div class="px-6 pb-4 text-slate-400 text-sm">
+                    Pour postuler à un doctorat, envoyez votre CV, lettre de motivation et relevés de notes
+                    à notre adresse email. Nous étudierons votre candidature et vous contacterons pour un entretien.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="glass rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <button
+                    class="w-full px-6 py-4 text-left flex items-center justify-between text-white font-medium hover:bg-white/5 transition-smooth">
+                    <span>Proposez-vous des stages ?</span>
+                    <i class="fas fa-chevron-down text-slate-400"></i>
+                </button>
+                <div class="px-6 pb-4 text-slate-400 text-sm">
+                    Oui, nous accueillons des stagiaires de Master tout au long de l'année.
+                    Les stages durent généralement de 4 à 6 mois et sont encadrés par nos chercheurs.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="glass rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <button
+                    class="w-full px-6 py-4 text-left flex items-center justify-between text-white font-medium hover:bg-white/5 transition-smooth">
+                    <span>Comment collaborer avec le laboratoire ?</span>
+                    <i class="fas fa-chevron-down text-slate-400"></i>
+                </button>
+                <div class="px-6 pb-4 text-slate-400 text-sm">
+                    Nous sommes ouverts aux collaborations académiques et industrielles. Contactez-nous
+                    avec votre proposition et nous organiserons une réunion pour discuter des possibilités.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
